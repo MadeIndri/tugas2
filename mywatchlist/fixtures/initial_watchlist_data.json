@@ -1,0 +1,113 @@
+[
+    {
+        "model": "mywatchlist.mywatchlist",
+        "pk": 1,
+        "fields": {
+            "watched": true,
+            "title":"KKN di Desa Penari",
+            "rating": 4,
+            "release_date": "30/04/2022",
+            "review": "Film horor yang banyak jumpscare di dalamnya dan banyak pesan yang bisa diambil dari film ini."
+        }
+    },
+    {
+        "model": "mywatchlist.mywatchlist",
+        "pk": 2,
+        "fields": {
+            "watched": false,
+            "title":"Ngeri Ngeri Sedap",
+            "rating": 5,
+            "release_date": "02/06/2022",
+            "review": "Penulisan naskahnya sangat baik. Unsur komedi, konflik, dan bagian sedihnya dibungkus dengan sangat baik juga."
+        }
+    },
+    {
+        "model": "mywatchlist.mywatchlist",
+        "pk": 3,
+        "fields": {
+            "watched": true,
+            "title":"Nanti Kita Cerita Tentang Hari Ini",
+            "rating": 4,
+            "release_date": "02/01/2020",
+            "review": "Cerita yang diangkat adalah topik yang masih jarang dibahas. Rasa kekeluargaan sangat terasa selama film."
+        }
+    },
+    {
+        "model": "mywatchlist.mywatchlist",
+        "pk": 4,
+        "fields": {
+            "watched": true,
+            "title":"Mulan",
+            "rating": 5,
+            "release_date": "25/03/2020",
+            "review": "Film live action disney yang menampilkan koreografi aktor dan pemandangan yang memukau."
+        }
+    },
+    {
+        "model": "mywatchlist.mywatchlist",
+        "pk": 5,
+        "fields": {
+            "watched": false,
+            "title":"Minions 2: The Rise of Gru",
+            "rating": 3,
+            "release_date": "28/06/2022",
+            "review": "Film yang cukup menghibur untuk meringankan beban pikiran. Namun, cerita yang diangkat mirip dengan film sebelumnya."
+        }
+    },
+    {
+        "model": "mywatchlist.mywatchlist",
+        "pk": 6,
+        "fields": {
+            "watched": true,
+            "title":"Parasite",
+            "rating": 4,
+            "release_date": "21/06/2019",
+            "review": "Aspek karakter, pengambilan gambar, musik, dan cerita berhasil membuat film ini sangat bagus. Namun, endingnya cukup mengejutkan."
+        }
+    },
+    {
+        "model": "mywatchlist.mywatchlist",
+        "pk": 7,
+        "fields": {
+            "watched": false,
+            "title":"Spiderman No Way Home",
+            "rating": 4,
+            "release_date": "15/12/2021",
+            "review": "Berhasil membuat puas fans Marvel , tetapi masih ada beberapa eksekusi adegan yang dapat diperbaiki."
+        }
+    },
+    {
+        "model": "mywatchlist.mywatchlist",
+        "pk": 8,
+        "fields": {
+            "watched": true,
+            "title":"5cm",
+            "rating": 5,
+            "release_date": "12/12/2012",
+            "review": "Tata sinematografi yang mengagumkan ditambah aktor yang sangat mendukung cerita yang dibawakan. Banyak hal yang dibahas dalam film ini, mulai dari persahabatan, percintaan, dan perjuangan."
+        }
+    },
+    {
+        "model": "mywatchlist.mywatchlist",
+        "pk": 9,
+        "fields": {
+            "watched": true,
+            "title":"Imperfect",
+            "rating": 5,
+            "release_date": "19/12/2019",
+            "review": "Film yang mengangkat cerita tentang isu yang banyak dirasakan orang, yaitu insecure. Film ini membungkus komedi dan drama dengan sangat baik. Pesan yang ngin disampaikan pun tersampaikan dengan sangat baik."
+        }
+    },
+    {
+        "model": "mywatchlist.mywatchlist",
+        "pk": 10,
+        "fields": {
+            "watched": true,
+            "title":"Midnight Runners",
+            "rating": 3,
+            "release_date": "30/08/2017",
+            "review": "Film action comedy tentang dua orang polisi yang memecahkan misteri. Komedi dibangun dengan sangat baik, tetapi actionnya masih dapat dirasakan."
+        }
+    }
+
+]
