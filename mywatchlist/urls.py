@@ -13,5 +13,5 @@ urlpatterns = [
     path('json/<int:id>', show_id_json, name='show_id_json'),
     path('xml/', showxml, name='showxml'),
     path('json/', showjson, name='showjson'),
-    path('html/', show_mywatchlist, name='show_mywatchlist'),
+    path('html/', show_mywatchlist, name='show_mywatchlist')
 ]
