@@ -1,5 +1,7 @@
 **Perbedaan antara JSON, XML, dan HTML**
+
 JSON singkatan dari JavaScript Object Nation adalah sebuah format yang digunakan untuk menyimpan, membaca, serta menukar informasi dari web server sehingga dapat dibaca oleh para pengguna dan dapat diakses secara logis. JSON disebut sebagai bahasa ideal untuk pertukaran data antar apliksi karena dapat dibaca dengan berbagai macam bahasa pemrograman, C, C++, Java, JavaScript, Python, dan masih banyak lagi. JSON terdiri dari dua struktur, yaitu kumpulan value yang saling berpasangan (object) dan kumpulan value yang berurutan (array).
+
 XML singkatan dari Extensive Markup Language adalah sebuah markup language yang dirancang untuk menyimpan dan mengantarkan data antar server. Hal ini karena ada keunikan dan perbedaan sistem yang digunakan oleh setiap server yang terhubung ke internet. XML akan menyimpan data dalam format teks sederhana. Sehingga, data dapat dimengerti oleh server yang menerima data tanpa perlu modifikasi apapun.
 HTML singkatan dari Hypertext Markup Language adalah bahasa standar pemrogaman yang digunakan untuk membuat halaman website, yang diakses melalui internet.
 Perbedaan JSON dan XML
