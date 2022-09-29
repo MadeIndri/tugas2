@@ -1,0 +1,83 @@
+<style>
+  * {
+  font-family: sans-serif; /* Change your font family */
+}
+
+.content-table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  min-width: 400px;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.content-table thead tr {
+  background-color: #e49fe5;
+  color: #ffffff;
+  text-align: center;
+  font-weight: bold;
+}
+
+.content-table th,
+.content-table td {
+  padding: 12px 15px;
+}
+
+.content-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.content-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.content-table tbody tr:last-of-type {
+  border-bottom: 2px solid #e49fe5;
+}
+</style>
+
+<div>
+    <div class="header">
+        <p>Hello, {{username}}!</p>
+    </div>
+
+    <button onclick="location.href='/todolist/create-task'">Tambah Task Baru</button>
+
+    <table border ="1" class="content-table">
+        <thead>
+        <tr>
+          <th>Date</th>
+          <th>Task</th>
+          <th>Descrtiption</th>
+          <th>Status</th>
+          <th>Change Status</th>
+          <th>Delete Task</th>
+        </tr>
+      </thead>
+        {% comment %} Add the data below this line {% endcomment %}
+        {% for todo in list_task %}
+        <tr>
+            <th>{{todo.date}}</th>
+            <th>{{todo.title}}</th>
+            <th>{{todo.description}}</th>
+            <th>
+              {% if todo.is_finished %}
+              Selesai
+              {% else %}
+              Belum selesai
+              {% endif%}
+            </th>
+            <th>
+              <button><a href="{% url 'todolist:change' todo.id %}" title="">Change</a></button>
+            </th>
+            <th>
+              <button><a href="{% url 'todolist:delete' todo.id %}" title="">Delete</a></button>
+            </th>
+        </tr>
+        {% endfor %}
+      </table>
+
+      <button><a href="{% url 'todolist:logout' %}">Logout</a></button>
+</div>

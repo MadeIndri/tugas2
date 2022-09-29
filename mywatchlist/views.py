@@ -6,6 +6,16 @@ from django.http import HttpResponse
 
 # Create your views here.
 
+def show_watched(request):
+    data_film_watched = MyWatchList.objects.filter(watched=True)
+    context = {
+        'list_film': data_film_watched,
+        'nama': 'Made Indri Maharani Natiadewi',
+        'id': '2106704295',
+    }
+    return render(request, "mywatchlist.html", context)
+
+
 def show_mywatchlist(request):
     data_film_mywatchlist = MyWatchList.objects.all()
     watched = 0
