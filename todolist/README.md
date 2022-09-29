@@ -1,4 +1,5 @@
 herokuapp : https://mywatchlistt.herokuapp.com/todolist/
+
 **Apa kegunaan {% csrf_token %} pada elemen form? Apa yang terjadi apabila tidak ada potongan kode tersebut pada elemen form?**
   
 CSRF merupakan singkatan dari Cross-Site Request Forgery yang merupakan salah satu bentuk serangan di web.  Kegunaan csrf_token untuk mencegah serangan CSRF yang akan membuat penyerang tidak dapat melakukan permintaan HTTP yang sepenuhnya valid yang cocok untuk diumpankan ke pengguna korban. Sebab penyerang tidak dapat menentukan atau memprediksi nilai token CSRF pengguna, penyerang tidak dapat membuat permintaan dengan semua parameter yang diperlukan aplikasi untuk memenuhi permintaan tersebut. Atau dengan kata lain CSRF_token berguna sebagai proteksi yang disediakan django. Perintah csrf_token harus digunakan bila kita ingin mengaktifkan pemeriksaan CSRF. Jika tidak ada potongan kode tersebut, keamanan permintaan posting dari pengguna ke server tidak aman karena ada kemungkinan serangan CSRF.
