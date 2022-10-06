@@ -47,6 +47,12 @@ td {
     color: black;
     font-weight: bold;
 }
+
+@media screen and (min-width: 30em) and (orientation: landscape) {
+    .create{
+        width: auto;
+    }
+}
 </style>
 
 {% extends 'base.html' %}
@@ -81,7 +87,7 @@ td {
     
             <input type="submit" name="submit" class="button" value="Tambah!"/>
         </form>
-    
+    </div>
     </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
