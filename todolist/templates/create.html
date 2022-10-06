@@ -1,33 +1,89 @@
+<style>
+
+
+.create {
+    background-color: #009688;
+    width: 40%;
+    margin: 100px auto ;
+    border-radius: 10px;
+    padding: 20px;
+    border-left: 10px solid #ea80a7;
+    text-align: center;
+    
+}
+
+#box{
+    border:0;
+    background-color: white;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #ea80a7;
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color: black;
+    border-radius: 24px;
+    transition: 0.25s;  
+}
+.button{
+    border:0;
+    background-color: aquamarine;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid black;
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color: black;
+    font-weight: bold;
+    font-size:medium;
+    border-radius: 24px;
+    transition: 0.25s;
+}
+
+td {
+    color: black;
+    font-weight: bold;
+}
+</style>
+
 {% extends 'base.html' %}
 
 {% block meta %}
 <title>Create New Task</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 {% endblock meta %}
 
 {% block content %}
+<body>
+    <div class="container-md">
+    <div class = "create">
 
-<div class = "create">
+        <h1>Create Todo List</h1>
+    
+        <form method="POST" action="">
+            {% csrf_token %}
+            <table>
+                <tr>
+                    <td>Judul Task:</td>
+                    <td><input type="text" id="box"  name="todo" placeholder="Tambah task" class="form-control"></td>
+                </tr>
+                        
+                <tr>
+                    <td>Deskripsi: </td>
+                    <td><input type="text" id = "box" name="description" placeholder="Deskripsi" class="form-control"></td>
+                </tr>
+            </table>
+    
+            <input type="submit" name="submit" class="button" value="Tambah!"/>
+        </form>
+    
+    </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+</body>
 
-    <h1>Create Todo List</h1>
-
-    <form method="POST" action="">
-        {% csrf_token %}
-        <table>
-            <tr>
-                <td>Judul Task:</td>
-                <td><input type="text" name="todo" placeholder="Tambah task" class="form-control"></td>
-            </tr>
-                    
-            <tr>
-                <td>Deskripsi: </td>
-                <td><input type="text" name="description" placeholder="Deskripsi" class="form-control"></td>
-            </tr>
-        </table>
-
-        <input type="submit" name="submit" value="Tambah!"/>
-    </form>
-
-
-</div>
 
 {% endblock content %}
