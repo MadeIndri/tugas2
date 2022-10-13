@@ -9,6 +9,11 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
 from django.shortcuts import render
 from todolist.models import Task
+from django.core import serializers
+from django.http.response import JsonResponse, HttpResponse
+
+from django.views.decorators.csrf import csrf_exempt
+
 
 # Create your views here.
 @login_required(login_url='/todolist/login/')
@@ -54,9 +59,10 @@ def logout_user(request):
     response.delete_cookie('last_login')
     return response
 
+@login_required(login_url='/todolist/login/')
 def createtask(request):
     if request.method == 'POST':
-        title = request.POST.get('todo')
+        title = request.POST.get('title')
         description = request.POST.get('description')
         date = datetime.datetime.now()
         user = request.user
@@ -76,3 +82,26 @@ def change(request, pk):
     data.is_finished = not(data.is_finished)
     data.save()
     return redirect('todolist:show_todolist')
+
+
+def show_json(request):
+    task = Task.objects.filter(user=request.user)
+    return HttpResponse(serializers.serialize('json', task), content_type='application/json')
+
+@csrf_exempt
+def add_ajax(request):
+    if request.method == 'POST':
+        title = request.POST.get('title')
+        description = request.POST.get('description')
+        date = datetime.date.today()
+        user = request.user
+        todo = Task.objects.create(title = title, description = description, date = date, user = user)
+
+        result = {
+                'pk':todo.pk,
+                'title':todo.title,
+                'date':todo.date,
+                'description':todo.description,
+            }
+        todo.save()
+        return JsonResponse(result)

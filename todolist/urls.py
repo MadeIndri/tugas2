@@ -6,6 +6,8 @@ from todolist.views import logout_user
 from todolist.views import createtask
 from todolist.views import delete
 from todolist.views import change
+from todolist.views import show_json
+from todolist.views import add_ajax
 
 app_name = 'todolist'
 
@@ -17,4 +19,6 @@ urlpatterns = [
      path('create-task/', createtask, name='create-task'),
     path('delete/<int:pk>', delete, name='delete'),
     path('change/<int:pk>', change, name='change'),
+    path('json/', show_json, name='show_json'),
+    path('add/', add_ajax, name='add_ajax')
 ]
